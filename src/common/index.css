@@ -1,0 +1,254 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  font-family: "Lora", serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --app-white: #fcfcf9;
+  --app-teal: #007991;
+  --app-purple: #a1869e;
+  --app-yellow: #fdf7a3;
+  --app-peach: #f4bc8b;
+  --app-black: #0c0a3e;
+  --app-teal-50: #00799179;
+  --app-shadow: rgba(0, 0, 0, 0.404);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3em;
+}
+
+/*
+ * Button Styles
+ */
+button.ctaButton {
+  padding: 0.5rem 2em 0.75em 2em;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 1.25em;
+  font-weight: 900;
+  max-height: 2.25em;
+  background-color: var(--app-peach);
+  color: var(--app-white);
+  border: none;
+  box-shadow: 0px 2px 5px 0px darkslategrey;
+}
+
+button.ctaButton:active {
+  box-shadow: 0px 1px 3px 0px var(--app-black) inset;
+  font-size: 1.2em;
+}
+
+/*
+ * Header Styles 
+ */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--app-white);
+  padding: 10px;
+  z-index: 100;
+}
+
+header img {
+  height: 35px;
+}
+
+footer {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: end;
+  padding: 10px;
+}
+
+footer img {
+  height: 1em;
+  margin-bottom: 5px;
+}
+
+footer div.linkRow {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+}
+
+footer a:active {
+  color: var(--app-black);
+}
+
+footer svg {
+  width: 3em;
+  height: 3em;
+  fill: var(--app-peach);
+}
+
+footer a:active svg {
+  width: 2.7em;
+  height: 2.7em;
+  color: var(--app-black);
+  padding: 0 0.3em;
+}
+
+.noScroll {
+  overflow: auto;
+}
+
+/*
+ * MENU ELEMENTS
+ */
+#sideMenu {
+  position: relative;
+  overflow: hidden;
+}
+
+#sideMenu nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--app-black);
+  width: 50%;
+  height: 100%;
+  color: var(--app-white);
+  transition: transform 400ms ease-in-out;
+}
+
+#sideMenu nav.hidden {
+  transform: translateX(100%);
+}
+
+#sideMenu nav ul {
+  padding: 5em 1em;
+  text-align: right;
+  letter-spacing: 0.25em;
+}
+
+#sideMenu nav ul li {
+  padding: 1em 0;
+}
+
+#sideMenu nav ul li.selectedPath {
+  color: var(--app-peach);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  background-color: var(--app-shadow);
+  overflow: hidden;
+  transition: transform 300ms ease-in-out;
+}
+
+.overlay.hidden {
+  transform: scale(0, 0);
+}
+
+/* 
+ * Home Elements 
+ */
+
+#homePage {
+  background-image: url("https://images.pexels.com/photos/6752432/pexels-photo-6752432.jpeg"),
+    linear-gradient(180deg, var(--app-yellow), var(--app-black));
+  background-blend-mode: luminosity;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+#homeHeader {
+  padding: 10px;
+  color: var(--app-teal);
+  margin: 10px 0 5px 0;
+}
+
+#ticketButton {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0px;
+  height: 4rem;
+}
+
+#lineup {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 2em;
+  background-color: var(--app-teal-50);
+  color: var(--app-white);
+  padding: 10px 15px;
+  overflow-wrap: initial;
+  margin: 5px 0;
+}
+
+#lineup li {
+  display: inline-block;
+  font-weight: 400;
+}
+
+#lineup li::after {
+  content: " • ";
+  white-space: pre;
+}
+
+#eventBoard {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px 5px;
+  margin: 5px 0;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  aspect-ratio: 1;
+}
+
+.eventIcon {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 80px;
+  width: 90%;
+  aspect-ratio: 1;
+}
+
+.event h5 {
+  color: var(--app-white);
+  font-weight: 400;
+  text-align: center;
+  padding-top: 0.5em;
+}
