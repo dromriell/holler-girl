@@ -1,12 +1,12 @@
-import { lineupData } from "../../common/lineupData";
+import { lineupData } from "../../common/siteData";
 import EventBoard from "./EventBoard";
-import Lineup from "./Lineup";
+import LineupSection from "./LineupSection";
 import Footer from "../Footer";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <article id="homePage" className="noScroll">
-      <secton>
+      <section>
         <div id="homeHeader">
           <h2>Richmond, KY</h2>
           <h2>August 12th & 13th, 2022</h2>
@@ -16,12 +16,12 @@ const Home = () => {
             <p>TICKETS & INFO</p>
           </button>
         </div>
-        <Lineup lineupData={lineupData} />
+        <LineupSection lineupData={lineupData} />
         <EventBoard />
-      </secton>
+      </section>
       <Footer />
     </article>
   );
 };
 
-export default Home;
+export default HomePage;
