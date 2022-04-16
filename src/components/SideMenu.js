@@ -26,16 +26,18 @@ const SideMenu = (props) => {
   return (
     <div id="sideMenu">
       <div
-        className={`overlay ${!isMenuOpen && "hidden"}`}
+        className={`overlay ${!isMenuOpen ? "hidden" : undefined}`}
         onClick={() => setIsMenuOpen(false)}
       ></div>
-      <nav className={!isMenuOpen && "hidden"}>
+      <nav className={!isMenuOpen ? "hidden" : undefined}>
         <ul>
           {routeLinks.map((route) => {
             const isCurrentPath = currentPath === route.path;
-            console.log(isCurrentPath, currentPath, route.path);
             return (
-              <li className={isCurrentPath && "selectedPath"}>
+              <li
+                className={isCurrentPath ? "selectedPath" : undefined}
+                key={route.name}
+              >
                 <a href={route.path}>
                   <h3>{route.name}</h3>
                 </a>
