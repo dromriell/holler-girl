@@ -18,3 +18,16 @@ export const lineupData = [
   "Liz Frazier",
   "Sydney Adams",
 ];
+
+export const ticketData = [
+  {
+    name: "Two Day Pass",
+    price: "85",
+    details: ["All ages", "Per person", "Includes camping"],
+  },
+  {
+    name: "Single Day Pass",
+    price: "50",
+    details: ["All ages", "Per person"],
+  },
+];
