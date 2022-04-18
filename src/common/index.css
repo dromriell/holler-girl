@@ -13,7 +13,8 @@ p {
 }
 
 :root {
-  --app-white: #fcfcf9;
+  --app-white: #f5e8e1;
+
   --app-teal: #007991;
   --app-purple: #a1869e;
   --app-yellow: #fdf7a3;
@@ -21,6 +22,11 @@ p {
   --app-black: #0c0a3e;
   --app-teal-50: #00799179;
   --app-shadow: rgba(0, 0, 0, 0.404);
+
+  --app-background: #574c44;
+  --app-green: #61988e;
+  --app-green-25: #61988e42;
+  --app-blue: #5db7de;
 }
 
 article {
@@ -40,7 +46,7 @@ button.ctaButton {
   font-size: 1.25em;
   font-weight: 900;
   max-height: 2.25em;
-  background-color: var(--app-peach);
+  background-color: var(--app-green);
   color: var(--app-white);
   border: none;
   box-shadow: 0px 2px 5px 0px darkslategrey;
@@ -48,7 +54,8 @@ button.ctaButton {
 
 button.ctaButton:active {
   box-shadow: 0px 1px 3px 0px var(--app-black) inset;
-  font-size: 1.2em;
+  font-size: 1.25em;
+  padding: 0.75rem 2em 0.8em 2em;
 }
 
 /*
@@ -123,16 +130,17 @@ footer a:active svg {
 #sideMenu {
   position: relative;
   overflow: hidden;
+  z-index: 99;
 }
 
 #sideMenu nav {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: var(--app-black);
+  background-color: var(--app-white);
   width: 50%;
   height: 100%;
-  color: var(--app-white);
+  color: var(--app-background);
   transition: transform 400ms ease-in-out;
 }
 
@@ -150,8 +158,12 @@ footer a:active svg {
   padding: 1em 0;
 }
 
+#sideMenu nav ul li a {
+  -webkit-tap-highlight-color: var(--app-green-25);
+}
+
 #sideMenu nav ul li.selectedPath {
-  color: var(--app-peach);
+  color: var(--app-green);
 }
 
 .overlay {
@@ -175,58 +187,170 @@ footer a:active svg {
  */
 
 #homePage {
-  background-image: url("https://images.pexels.com/photos/6752432/pexels-photo-6752432.jpeg"),
-    linear-gradient(180deg, var(--app-yellow), var(--app-black));
-  background-blend-mode: luminosity;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow-y: scroll;
+  background-color: black;
 }
 
+#homeHero {
+  position: relative;
+  height: 250vh;
+  padding-bottom: 5em;
+}
+
+/* HOME HEADER */
+
 #homeHeader {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding: 10px;
-  color: var(--app-teal);
-  margin: 10px 0 5px 0;
+  color: var(--app-white);
+  text-align: center;
+  z-index: 10;
+}
+
+#homeHeader img {
+  height: 40%;
+  margin: 10px 0;
+}
+
+.homeHeaderTitle {
+  padding: 5% 0;
+}
+
+#homeHeader > h3,
+#homeHeader > h4 {
+  line-height: 1.5rem;
+  font-weight: 400;
+  padding: 1rem 0;
 }
 
 #ticketButton {
   display: flex;
   justify-content: center;
-  margin: 5px 0px;
-  height: 4rem;
+  padding: 1rem;
+  width: 100vw;
+}
+
+/* Parallax Elements */
+
+#homeHeroBackground {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transform-style: preserve-3d;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+#homeHeroImg {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/6752432/pexels-photo-6752432.jpeg"),
+    linear-gradient(180deg, var(--app-background) 50%, var(--app-green));
+  background-blend-mode: soft-light, luminosity;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#clouds {
+  position: absolute;
+  top: -2em;
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  will-change: width;
+  transform: translateX(0);
+  z-index: 50;
+  overflow-x: hidden;
+}
+
+.cloud {
+  width: 50%;
+  height: calc(50vw * 0.5453125);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+#homeHeroBorder {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50vh;
+  will-change: transform;
+  transform: translateY(0);
+  z-index: 50;
+}
+
+#homeHeroBorderImg {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+/* LINEUP */
+
+#lineupContainer {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
 }
 
 #lineup {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   text-align: center;
-  line-height: 2em;
-  background-color: var(--app-teal-50);
-  color: var(--app-white);
+  background-color: var(--app-white);
+  color: var(--app-background);
   padding: 10px 15px;
   overflow-wrap: initial;
-  margin: 5px 0;
+  box-shadow: 0 30px 40px 40px var(--app-white);
+  border-radius: 25px;
+}
+
+#lineup h2 {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  z-index: 99;
+}
+
+#lineup ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #lineup li {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   font-weight: 400;
+  width: min-content;
+  white-space: break-space;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
-#lineup li::after {
-  content: " • ";
-  white-space: pre;
-}
+/* EVENT BOARD */
 
 #eventBoard {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
-  padding: 10px 5px;
-  margin: 5px 0;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  padding-bottom: 10vh;
+  z-index: 98;
 }
 
 .event {
@@ -234,24 +358,44 @@ footer a:active svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  aspect-ratio: 1;
+  width: 80%;
+  position: relative;
+  margin: 1em;
 }
 
-.eventIcon {
-  display: flex;
-  justify-content: center;
-  border-radius: 5px;
-  font-size: 80px;
-  width: 90%;
+.eventBackground {
+  width: 100%;
   aspect-ratio: 1;
+  max-width: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid var(--app-peach);
+  border-radius: 50%;
 }
 
 .event h5 {
   color: var(--app-white);
+  font-size: 2rem;
   font-weight: 400;
   text-align: center;
-  padding-top: 0.5em;
+}
+
+/* Map */
+#map {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+  background-color: black;
+  z-index: 98;
+}
+
+#map img {
+  border: 3px solid var(--app-green);
+  border-radius: 10px;
 }
 
 /*
