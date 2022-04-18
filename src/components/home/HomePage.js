@@ -1,24 +1,29 @@
+import { useState, useEffect } from "react";
+
 import { lineupData } from "../../common/siteData";
 import EventBoard from "./EventBoard";
 import LineupSection from "./LineupSection";
 import Footer from "../Footer";
+import HeroParallax from "./HeroParallax";
+import HomeHeader from "./HomeHeader";
+
+import map from "../../assets/map.png";
 
 const HomePage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [pageOffset, setPageOffset] = useState(0);
+
   return (
     <article id="homePage" className="noScroll">
-      <section>
-        <div id="homeHeader">
-          <h2>Richmond, KY</h2>
-          <h2>August 12th & 13th, 2022</h2>
-        </div>
-        <div id="ticketButton">
-          <button className="ctaButton">
-            <p>TICKETS & INFO</p>
-          </button>
-        </div>
-        <LineupSection lineupData={lineupData} />
-        <EventBoard />
+      <section id="homeHero">
+        <HomeHeader />
+        <LineupSection lineupData={lineupData} pageOffset={pageOffset} />
+        <HeroParallax pageOffset={pageOffset} />
       </section>
+      <section id="map">
+        <img src={map} alt="map" />
+      </section>
+      <EventBoard />
       <Footer />
     </article>
   );
