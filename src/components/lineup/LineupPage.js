@@ -1,5 +1,5 @@
 import Footer from "../Footer";
-import poster from "../../assets/holler_girl_poster_small.png";
+import poster from "../../assets/lineupPoster.jpg";
 
 const LineupPage = (props) => {
   return (
