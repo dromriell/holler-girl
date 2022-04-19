@@ -1,29 +1,28 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import { lineupData } from "../../common/siteData";
+import HomeHero from "./HomeHero";
 import EventBoard from "./EventBoard";
-import LineupSection from "./LineupSection";
 import Footer from "../Footer";
-import HeroParallax from "./HeroParallax";
-import HomeHeader from "./HomeHeader";
-
-import map from "../../assets/map.png";
+import map from "../../assets/map.webp";
+import LoadingOverlay from "../LoadingOverlay";
 
 const HomePage = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [pageOffset, setPageOffset] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <article id="homePage" className="noScroll">
-      <section id="homeHero">
-        <HomeHeader />
-        <LineupSection lineupData={lineupData} pageOffset={pageOffset} />
-        <HeroParallax pageOffset={pageOffset} />
-      </section>
+    <article
+      id="homePage"
+      className="noScroll"
+      style={!isLoaded ? { overflow: "hidden", maxHeight: "100vh" } : undefined}
+    >
+      {!isLoaded && <LoadingOverlay />}
+      <HomeHero setIsLoaded={setIsLoaded} />
+      <EventBoard />
       <section id="map">
+        <h5>295 E Prong Rd</h5>
+        <h5>Richmond, KY 40475</h5>
         <img src={map} alt="map" />
       </section>
-      <EventBoard />
       <Footer />
     </article>
   );
