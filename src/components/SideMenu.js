@@ -12,13 +12,13 @@ const routeLinks = [
     path: "/lineup",
   },
   {
-    name: "Camping",
-    path: "/camping",
+    name: "Info",
+    path: "/info",
   },
-  {
-    name: "Merch",
-    path: "/merch",
-  },
+  // {
+  //   name: "Merch",
+  //   path: "/merch",
+  // },
 ];
 
 const SideMenu = (props) => {

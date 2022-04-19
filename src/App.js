@@ -7,7 +7,7 @@ import SideMenu from "./components/SideMenu";
 import HomePage from "./components/home/HomePage";
 import TicketsPage from "./components/tickets/TicketsPage";
 import LineupPage from "./components/lineup/LineupPage";
-import CampingPage from "./components/camping/CampingPage";
+import FestivalInfoPage from "./components/festivalInfo/FestivalInfoPage";
 import MerchPage from "./components/merch/MerchPage";
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/tickets" element={<TicketsPage />} />
         <Route path="/lineup" element={<LineupPage />} />
-        <Route path="/camping" element={<CampingPage />} />
+        <Route path="/info" element={<FestivalInfoPage />} />
         <Route path="/merch" element={<MerchPage />} />
       </Routes>
     </main>
