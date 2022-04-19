@@ -38,7 +38,7 @@ const SideMenu = (props) => {
                 className={isCurrentPath ? "selectedPath" : undefined}
                 key={route.name}
               >
-                <a href={route.path}>
+                <a href={route.path} onClick={() => setIsMenuOpen(false)}>
                   <h3>{route.name}</h3>
                 </a>
               </li>
