@@ -12,9 +12,10 @@ const TicketsPage = (props) => {
         <TicketList ticketData={ticketData} />
         <div id="ticketInstructions">
           <p>
-            To order tickets, follow the Venmo link and add your name and
-            requested pass in the message. If purchasing multiple passes, please
-            include additional names as well.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Porttitor rhoncus dolor purus non enim praesent elementum facilisis
+            leo. Mi proin sed libero enim.
           </p>
         </div>
       </section>
