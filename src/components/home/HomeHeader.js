@@ -1,9 +1,12 @@
 import { default as logo } from "../../assets/HiResTrans.svg";
 
 const HomeHeader = (props) => {
+  const { setIsLoaded } = props;
   return (
     <div id="homeHeader">
-      <img src={logo} alt="homeLogo" />
+      <div className="homeHeaderImg">
+        <img src={logo} alt="homeLogo" onLoad={() => setIsLoaded(true)} />
+      </div>
       <div className="homeHeaderTitle">
         <h2>Richmond, KY</h2>
         <h2>August 12th & 13th, 2022</h2>
