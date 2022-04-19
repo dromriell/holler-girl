@@ -76,6 +76,7 @@ header {
   background-color: var(--app-white);
   padding: 10px;
   z-index: 100;
+  box-shadow: 0 1px 5px 2px var(--app-shadow);
 }
 
 header img {
@@ -574,6 +575,7 @@ footer svg {
   border: 1px solid var(--app-background);
   border-radius: 10px;
   margin-bottom: 1em;
+  max-width: 600px;
 }
 
 .pricingInfo {
@@ -600,9 +602,15 @@ footer svg {
 }
 
 #ticketInstructions {
+  display: flex;
+  justify-content: center;
   padding: 10px;
   text-align: justify;
   line-height: 1.5rem;
+}
+
+#ticketInstructions p {
+  max-width: 600px;
 }
 
 /*
@@ -614,7 +622,14 @@ footer svg {
 }
 
 #lineupPoster {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+#lineupPoster img {
+  max-width: 600px;
 }
 
 /* 
@@ -665,4 +680,15 @@ footer svg {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 10px;
+}
+
+#FestivalInfo p {
+  max-width: 600px;
+}
+
+@media screen and (min-width: 600px) {
+  #FestivalInfo {
+    align-items: center;
+    padding: 2em;
+  }
 }
