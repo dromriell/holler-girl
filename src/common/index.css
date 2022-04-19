@@ -16,7 +16,7 @@ p {
   --app-white: #f5e8e1;
 
   --app-teal: #007991;
-  --app-purple: #a1869e;
+  --app-accent: #f679e5;
   --app-yellow: #fdf7a3;
   --app-peach: #f4bc8b;
   --app-black: #0c0a3e;
@@ -24,6 +24,7 @@ p {
   --app-shadow: rgba(0, 0, 0, 0.404);
 
   --app-background: #574c44;
+  --app-sand: #d6b6a7;
   --app-green: #61988e;
   --app-green-25: #61988e42;
   --app-blue: #5db7de;
@@ -50,6 +51,7 @@ button.ctaButton {
   color: var(--app-white);
   border: none;
   box-shadow: 0px 2px 5px 0px darkslategrey;
+  letter-spacing: 0.25em;
 }
 
 button.ctaButton:active {
@@ -103,21 +105,10 @@ footer div.linkRow {
   padding: 5px 0;
 }
 
-footer a:active {
-  color: var(--app-black);
-}
-
 footer svg {
   width: 3em;
   height: 3em;
-  fill: var(--app-peach);
-}
-
-footer a:active svg {
-  width: 2.7em;
-  height: 2.7em;
-  color: var(--app-black);
-  padding: 0 0.3em;
+  fill: var(--app-green);
 }
 
 .noScroll {
@@ -142,6 +133,7 @@ footer a:active svg {
   height: 100%;
   color: var(--app-background);
   transition: transform 400ms ease-in-out;
+  max-width: 250px;
 }
 
 #sideMenu nav.hidden {
@@ -182,18 +174,54 @@ footer a:active svg {
   transform: scale(0, 0);
 }
 
+.loadingOverlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--app-background);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid var(--app-sand); /* Light grey */
+  border-top: 10px solid var(--app-white); /* Black */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+@media screen and (min-width: 600px) {
+}
+
 /* 
  * Home Elements 
  */
 
 #homePage {
   background-color: black;
+  overflow: hidden;
 }
 
 #homeHero {
   position: relative;
   height: 250vh;
   padding-bottom: 5em;
+  min-height: 1800px;
 }
 
 /* HOME HEADER */
@@ -210,9 +238,17 @@ footer a:active svg {
   z-index: 10;
 }
 
-#homeHeader img {
+.homeHeaderImg {
+  display: flex;
+  justify-content: center;
   height: 40%;
+  width: 100%;
   margin: 10px 0;
+}
+
+#homeHeader img {
+  height: 100%;
+  aspect-ratio: 1;
 }
 
 .homeHeaderTitle {
@@ -261,12 +297,11 @@ footer a:active svg {
   position: absolute;
   top: -2em;
   width: 100%;
-  height: 25vh;
   display: flex;
   will-change: width;
   transform: translateX(0);
   z-index: 50;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .cloud {
@@ -281,7 +316,7 @@ footer a:active svg {
 
 #homeHeroBorder {
   position: absolute;
-  bottom: 0;
+  bottom: -2em;
   width: 100%;
   height: 50vh;
   will-change: transform;
@@ -301,8 +336,10 @@ footer a:active svg {
 
 #lineupContainer {
   position: relative;
+  align-items: center;
   z-index: 10;
   height: 100vh;
+  z-index: 98;
 }
 
 #lineup {
@@ -313,7 +350,7 @@ footer a:active svg {
   color: var(--app-background);
   padding: 10px 15px;
   overflow-wrap: initial;
-  box-shadow: 0 30px 40px 40px var(--app-white);
+  box-shadow: 0 0px 30px 30px var(--app-white);
   border-radius: 25px;
 }
 
@@ -393,9 +430,116 @@ footer a:active svg {
   z-index: 98;
 }
 
+#map h5 {
+  font-size: 1.2rem;
+  width: 100%;
+  color: var(--app-white);
+}
+
 #map img {
   border: 3px solid var(--app-green);
   border-radius: 10px;
+  margin: 1em 0;
+}
+
+@media screen and (min-width: 600px) {
+  #homeHero {
+    height: 275vh;
+  }
+
+  #homeHeader img {
+    max-width: 50vh;
+  }
+
+  .homeHeaderTitle {
+    padding: 1em 0;
+  }
+
+  #homeHeader > h3,
+  #homeHeader > h4 {
+    width: 60%;
+  }
+
+  #lineup {
+    width: 60%;
+  }
+
+  #clouds {
+    position: absolute;
+    top: -7em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    will-change: transform;
+    transform: translateX(0);
+    z-index: 50;
+    overflow: hidden;
+  }
+
+  .cloud {
+    width: 25%;
+    aspect-ratio: 1.5453125;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 1.5;
+  }
+
+  #homeHeroBorder {
+    height: 75vw;
+  }
+
+  #homeHeroBorderImg {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #homeHeader > h3,
+  #homeHeader > h4 {
+    width: 50%;
+  }
+
+  #lineup {
+    width: 50%;
+  }
+
+  #homeHeroBorder {
+    height: 60vw;
+  }
+
+  #eventBoard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .event {
+    width: 45%;
+  }
+
+  #map {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 2em;
+    background-color: black;
+    z-index: 98;
+  }
+
+  #map h5 {
+    font-size: 1.2rem;
+    width: 50%;
+    color: var(--app-white);
+  }
+
+  #map img {
+    border: 3px solid var(--app-green);
+    border-radius: 10px;
+    margin: 1em 0;
+  }
 }
 
 /*
@@ -404,13 +548,13 @@ footer a:active svg {
 
 #ticketsPage {
   background-color: var(--app-white);
+  color: var(--app-background);
 }
 
 .pageHeader {
   display: flex;
   justify-content: center;
   width: 100%;
-  color: var(--app-teal);
 }
 
 #ticketOptionsList {
@@ -427,7 +571,7 @@ footer a:active svg {
   flex-direction: column;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--app-teal);
+  border: 1px solid var(--app-background);
   border-radius: 10px;
   margin-bottom: 1em;
 }
@@ -440,7 +584,6 @@ footer a:active svg {
 }
 
 .pricingInfo h2 {
-  color: var(--app-teal);
   font-weight: 400;
 }
 
@@ -448,12 +591,12 @@ footer a:active svg {
   flex: 1;
   text-align: right;
   font-size: 1.75rem;
-  color: var(--app-peach);
+  color: var(--app-blue);
 }
 
 .ticketOption ul li::before {
   content: "• ";
-  color: var(--app-peach);
+  color: var(--app-blue);
 }
 
 #ticketInstructions {
@@ -471,5 +614,55 @@ footer a:active svg {
 }
 
 #lineupPoster {
+  padding: 10px;
+}
+
+/* 
+ * Festival Info Page 
+ */
+
+#FestivalInfoPage {
+  background-color: var(--app-white);
+  color: var(--app-background);
+}
+
+#FestivalInfoHeader {
+  position: relative;
+  height: 25vh;
+  max-height: 500px;
+}
+
+#FestivalInfoHeader h1 {
+  position: relative;
+  color: var(--app-white);
+}
+
+#FestivalInfoHeaderBackground {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transform-style: preserve-3d;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+#FestivalInfoHeaderBackgroundImg {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/6324373/pexels-photo-6324373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+    linear-gradient(180deg, var(--app-background) 50%, var(--app-green));
+  background-blend-mode: soft-light, luminosity;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#FestivalInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 10px;
 }
