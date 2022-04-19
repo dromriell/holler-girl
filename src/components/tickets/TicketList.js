@@ -1,7 +1,7 @@
 const TicketOption = (props) => {
-  const { name, price, details, idx } = props;
+  const { name, price, details } = props;
   return (
-    <li className="ticketOption" key={`ticket-option-${idx}`}>
+    <li className="ticketOption">
       <div className="pricingInfo">
         <h2>{name}</h2>
         <h3>${price}</h3>
@@ -19,11 +19,12 @@ const TicketList = (props) => {
   const { ticketData } = props;
   return (
     <ul id="ticketOptionsList">
-      {ticketData.map((ticket, idx) => {
-        return <TicketOption {...ticket} idx={idx} />;
+      {ticketData.map((ticket) => {
+        const ticketKey = `ticketOption${ticket.price}`;
+        return <TicketOption {...ticket} key={ticketKey} />;
       })}
     </ul>
   );
 };
 
-export { TicketList as default, TicketOption };
+export default TicketList;
