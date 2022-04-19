@@ -1,4 +1,4 @@
-import cloud from "../../assets/cloud-1.png";
+import cloud from "../../assets/cloud-1.webp";
 
 const Clouds = (props) => {
   const { pageOffset } = props;

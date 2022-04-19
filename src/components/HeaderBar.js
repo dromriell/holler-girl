@@ -1,5 +1,5 @@
-import potpLogo from "../assets/potplogo.png";
-import hollerGirlLogo from "../assets/HollerGirl.png";
+import potpLogo from "../assets/potplogo.webp";
+import hollerGirlLogo from "../assets/HollerGirl.webp";
 import menuIcon from "../assets/menuIcon.png";
 
 const HeaderBar = (props) => {
