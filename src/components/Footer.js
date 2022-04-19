@@ -1,4 +1,4 @@
-import hollerGirlLogo from "../assets/HollerGirl.png";
+import hollerGirlLogo from "../assets/HollerGirl.webp";
 import { ReactComponent as FacebookLogo } from "../assets/facebook.svg";
 import { ReactComponent as TwitterLogo } from "../assets/twitter.svg";
 import { ReactComponent as EmailLogo } from "../assets/email.svg";
@@ -12,7 +12,7 @@ const Footer = (props) => {
         <img src={hollerGirlLogo} alt={"hollerGirlLogo"} />
       </div>
       <div className="linkRow">
-        <a href="#">
+        <a href="https://www.facebook.com/HollerGirlmusic">
           <FacebookLogo />
         </a>
         <a href="#">
