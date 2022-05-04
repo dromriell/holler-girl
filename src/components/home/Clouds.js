@@ -9,7 +9,8 @@ const Clouds = (props) => {
         className="cloud"
         style={{
           backgroundImage: `url(${cloud})`,
-          transform: `translate(${pageOffset * -0.1}px, 25px)`,
+          transform: `translate(${pageOffset * -0.1}px, 0)`,
+          alignSelf: "flex-end",
           opacity: 1 - pageOffset * 0.001,
         }}
       ></div>
@@ -18,6 +19,7 @@ const Clouds = (props) => {
         style={{
           backgroundImage: `url(${cloud})`,
           transform: `translate(${pageOffset * 0.1}px, 0)`,
+          alignSelf: "flex-start",
           opacity: 1 - pageOffset * 0.001,
         }}
       ></div>

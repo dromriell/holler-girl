@@ -297,7 +297,8 @@ footer svg {
 #clouds {
   position: absolute;
   top: -2em;
-  width: 100%;
+  width: 100vw;
+  height: calc(50vw * 0.45);
   display: flex;
   will-change: width;
   transform: translateX(0);
@@ -307,8 +308,7 @@ footer svg {
 
 .cloud {
   width: 50%;
-  height: calc(50vw * 0.5453125);
-
+  height: calc(50vw * 0.36);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
