@@ -3,7 +3,7 @@ import { useState } from "react";
 import HomeHero from "./HomeHero";
 import EventBoard from "./EventBoard";
 import Footer from "../Footer";
-import map from "../../assets/map.webp";
+import map from "../../assets/map01.png";
 import LoadingOverlay from "../LoadingOverlay";
 
 const HomePage = () => {
