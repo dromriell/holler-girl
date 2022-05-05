@@ -19,9 +19,13 @@ const HomePage = () => {
       <HomeHero setIsLoaded={setIsLoaded} />
       <EventBoard />
       <section id="map">
-        <h5>295 E Prong Rd</h5>
-        <h5>Richmond, KY 40475</h5>
-        <img src={map} alt="map" />
+        <div
+          className="mapBackground"
+          style={{ backgroundImage: `url('${map}')` }}
+        >
+          <h5>4211 Lower River Road</h5>
+          <h5>Livingston, KY 40445</h5>
+        </div>
       </section>
       <Footer />
     </article>
