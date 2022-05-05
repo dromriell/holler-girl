@@ -13,7 +13,9 @@ const HomeHeader = (props) => {
       </div>
       <div id="ticketButton">
         <button className="ctaButton">
-          <p>TICKETS & INFO</p>
+          <a href="https://www.tickettailor.com/events/hollergirl/695993#">
+            <p>TICKETS & INFO</p>
+          </a>
         </button>
       </div>
       <h3>
