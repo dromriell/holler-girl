@@ -8,7 +8,7 @@ const HomeHeader = (props) => {
         <img src={logo} alt="homeLogo" onLoad={() => setIsLoaded(true)} />
       </div>
       <div className="homeHeaderTitle">
-        <h2>Richmond, KY</h2>
+        <h2>Mt Vernon, KY</h2>
         <h2>August 12th & 13th, 2022</h2>
       </div>
       <div id="ticketButton">
