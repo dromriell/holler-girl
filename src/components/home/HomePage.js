@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import HomeHero from "./HomeHero";
 import EventBoard from "./EventBoard";
+import PartnerSection from "./PartnerSection";
 import Footer from "../Footer";
 import map from "../../assets/map01.png";
 import LoadingOverlay from "../LoadingOverlay";
@@ -18,13 +19,16 @@ const HomePage = () => {
       {!isLoaded && <LoadingOverlay />}
       <HomeHero setIsLoaded={setIsLoaded} />
       <EventBoard />
+      <PartnerSection />
       <section id="map">
         <div
           className="mapBackground"
           style={{ backgroundImage: `url('${map}')` }}
         >
-          <h5>4211 Lower River Road</h5>
-          <h5>Livingston, KY 40445</h5>
+          <h5>
+            <span>4211 Lower River Road</span>
+            <span>Livingston, KY 40445</span>
+          </h5>
         </div>
       </section>
       <Footer />
