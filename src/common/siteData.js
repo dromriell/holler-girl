@@ -46,22 +46,27 @@ export const ticketData = [
 export const eventData = {
   camping: [
     {
-      name: "camping",
+      name: "The Site",
       images: [camping01, camping02, camping03],
-      description: "RV, Tent, & Car Camping",
+      description: `
+      Located on nearly 200 acres of serene Kentucky woodlands, Rockcastle Riverside offers a number open-air activities to experience alongside the music. 
+      Enjoy kayaking, swimming, or fishing on a mile of Rockcastle River or adventure along the captivating hiking trails. 
+      `,
     },
   ],
   activities: [
     {
-      name: "yoga",
+      name: "",
       images: [
         "https://images.pexels.com/photos/4793296/pexels-photo-4793296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       ],
       description: "Saturday Morning Yoga w/ Ashley Shochat",
     },
     {
-      name: "auction",
-      images: [gh17],
+      name: "",
+      images: [
+        "https://greenhouse17.org/wp-content/uploads/2018/04/30859108_10212520898678271_1249968857_n-600x601.jpg",
+      ],
       description: "Silent Art Auction in Support of GreenHouse17",
     },
   ],
