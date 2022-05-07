@@ -1,11 +1,12 @@
 import { eventData } from "../../common/siteData";
+import siteTitle from "../../assets/siteText.svg";
 
 const Event = (props) => {
-  const { isBorder, images, description } = props;
+  const { images, name, description } = props;
 
   return (
     <div className="event">
-      <h5>{description}</h5>
+      <p>{description}</p>
       {images.map((image) => {
         return (
           <div
@@ -21,9 +22,16 @@ const Event = (props) => {
 const CampingSection = (props) => {
   return (
     <div id="campingSection" className="eventSection">
+      <img src={siteTitle} alt="The Site" />
+      {siteTitle}
       {eventData.camping.map((event, idx) => {
         return <Event {...event} key={idx} />;
       })}
+      <button className="ctaButton">
+        <a href="/info/">
+          <p>Learn More</p>
+        </a>
+      </button>
     </div>
   );
 };
