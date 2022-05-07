@@ -296,7 +296,7 @@ footer svg {
 
 #clouds {
   position: absolute;
-  top: -2em;
+  top: 0;
   width: 100vw;
   height: calc(50vw * 0.45);
   display: flex;
@@ -344,38 +344,17 @@ footer svg {
 }
 
 #lineup {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: var(--app-white);
   color: var(--app-background);
-  padding: 10px 15px;
-  overflow-wrap: initial;
-  box-shadow: 0 0px 30px 30px var(--app-white);
-  border-radius: 25px;
+  width: 100%;
 }
 
-#lineup h2 {
-  padding: 1rem 0;
-  font-size: 1.25rem;
-  z-index: 99;
-}
-
-#lineup ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-#lineup li {
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  width: min-content;
-  white-space: break-space;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
+#lineup img {
+  position: absolute;
+  width: 125vw;
 }
 
 /* EVENT BOARD */
@@ -403,7 +382,7 @@ footer svg {
 
 #activitiesSection {
   padding-top: 3em;
-  background-color: var(--app-sand);
+  background-color: var(--app-white);
   color: var(--app-black);
 }
 
@@ -415,6 +394,7 @@ footer svg {
   align-items: center;
   width: 80%;
   position: relative;
+  margin: 2em 0;
 }
 
 .eventBackground {
@@ -425,7 +405,7 @@ footer svg {
   background-repeat: no-repeat;
   background-size: cover;
   border: 2px solid var(--app-peach);
-  border-radius: 50%;
+  border-radius: 10%;
   margin: 1em 0;
 }
 
@@ -436,9 +416,27 @@ footer svg {
   text-align: center;
 }
 
-#activitiesSection .event h5 {
+.event p {
+  color: var(--app-white);
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
+
+#activitiesSection .eventBackground {
+  border-radius: 50%;
   color: var(--app-black);
 }
+
+#activitiesSection .event p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--app-black);
+  margin-bottom: 0;
+}
+
+/* Partner */
 
 /* Map */
 
@@ -500,7 +498,6 @@ footer svg {
     justify-content: space-between;
     will-change: transform;
     transform: translateX(0);
-    z-index: 50;
     overflow: hidden;
   }
 
@@ -511,6 +508,11 @@ footer svg {
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 1.5;
+    z-index: 50;
+  }
+
+  .cloud.backgroundCloud {
+    z-index: 5;
   }
 
   #homeHeroBorder {
