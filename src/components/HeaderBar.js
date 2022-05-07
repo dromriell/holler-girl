@@ -1,4 +1,4 @@
-import hollerGirlLogo from "../assets/HollerGirl.webp";
+import logoText from "../assets/logoText.svg";
 import menuIcon from "../assets/menuIcon.png";
 
 const HeaderBar = (props) => {
@@ -7,7 +7,7 @@ const HeaderBar = (props) => {
     <header id="mainHeader">
       <div className="headerLeftIcon"></div>
       <div>
-        <img src={hollerGirlLogo} alt={"hollerGirlLogo"} />
+        <img src={logoText} alt={"hollerGirlLogo"} />
       </div>
       <div className="menuButton" onClick={handleMenuToggle}>
         <img src={menuIcon} alt={"menuIcon"} />
