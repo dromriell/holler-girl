@@ -71,3 +71,15 @@ export const eventData = {
     },
   ],
 };
+
+export const partnersArray = [
+  {
+    name: "GreenHouse17",
+    logoSrc: gh17,
+  },
+  {
+    name: "Rockcastle Riverside",
+    logoSrc:
+      "https://static.wixstatic.com/media/c0bb12_1f109e260fed4e1b8f5b061a430d23a8~mv2.jpg/v1/fill/w_538,h_208,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/rockcastlelogo.jpg",
+  },
+];
