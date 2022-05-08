@@ -1,9 +1,3 @@
-import camping01 from "../assets/camping01.webp";
-import camping02 from "../assets/camping02.webp";
-import camping03 from "../assets/camping03.webp";
-
-import gh17 from "../assets/greenhouse17.webp";
-
 export const lineupData = [
   "Rachel Crowe",
   "Ande Fee",
@@ -51,28 +45,36 @@ export const ticketData = [
 export const eventData = {
   camping: [
     {
-      name: "The Site",
-      images: [camping01, camping02, camping03],
-      description: `
+      name: "camping",
+      images: [
+        "https://res.cloudinary.com/dnmokvouu/image/upload/v1652038180/hollergirl2022/camping01_rp723m.webp",
+        "https://res.cloudinary.com/dnmokvouu/image/upload/v1652038187/hollergirl2022/camping02_uflzfz.webp",
+        "https://res.cloudinary.com/dnmokvouu/image/upload/v1652038192/hollergirl2022/camping03_vfpvkl.webp",
+      ],
+      title: `
       Located on nearly 200 acres of serene Kentucky woodlands, Rockcastle Riverside offers a number open-air activities to experience alongside the music. 
       Enjoy kayaking, swimming, or fishing on a mile of Rockcastle River or adventure along the captivating hiking trails. 
       `,
+      description: "",
     },
   ],
   activities: [
     {
-      name: "",
+      name: "yoga",
       images: [
-        "https://images.pexels.com/photos/4793296/pexels-photo-4793296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://res.cloudinary.com/dnmokvouu/image/upload/v1652029645/hollergirl2022/Ashley_xb6gmm.webp",
       ],
-      description: "Saturday Morning Yoga w/ Ashley Shochat",
+      title: "Saturday Morning Yoga w/ Ashley Shochat",
+      description:
+        "Ashley Shochat has been practicing yoga for over 30 years and teaching for 15. She has studied with Sharon Gannon, Rodney Yee, Bikram Choudery, and Mary Jarvis, among others. She holds certification from the Bikram Yoga College of India, Core Power Vinyasa, and the Prison Yoga Project. She is also a visual artist and lives in Lexington with her lovely wife.",
     },
     {
-      name: "",
+      name: "auction",
       images: [
-        "https://greenhouse17.org/wp-content/uploads/2018/04/30859108_10212520898678271_1249968857_n-600x601.jpg",
+        "https://res.cloudinary.com/dnmokvouu/image/upload/v1652029914/hollergirl2022/greenhouse17_01_j4jn60.webp",
       ],
-      description: "Silent Art Auction in Support of GreenHouse17",
+      title: "Silent Art Auction in Support of GreenHouse17",
+      description: "",
     },
   ],
 };
@@ -80,7 +82,7 @@ export const eventData = {
 export const partnersArray = [
   {
     name: "GreenHouse17",
-    logoSrc: gh17,
+    logoSrc: "",
   },
   {
     name: "Rockcastle Riverside",
