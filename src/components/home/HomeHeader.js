@@ -1,9 +1,13 @@
 import { default as logo } from "../../assets/HiResTrans.svg";
+import gh17PresentsTitle from "../../assets/gh17PresentsTitle.svg";
 
 const HomeHeader = (props) => {
   const { setIsLoaded } = props;
   return (
     <div id="homeHeader">
+      <div id="homeHeaderPartnerImg">
+        <img src={gh17PresentsTitle} alt="Greenhouse17 Logo" />
+      </div>
       <div className="homeHeaderImg">
         <img src={logo} alt="homeLogo" onLoad={() => setIsLoaded(true)} />
       </div>
@@ -14,7 +18,7 @@ const HomeHeader = (props) => {
       <div id="ticketButton">
         <button className="ctaButton">
           <a href="https://www.tickettailor.com/events/hollergirl/695993#">
-            <p>TICKETS & INFO</p>
+            <p>BUY TICKETS</p>
           </a>
         </button>
       </div>
