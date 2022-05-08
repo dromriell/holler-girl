@@ -1,12 +1,15 @@
 import Footer from "../Footer";
-import poster from "../../assets/lineupPoster.jpg";
+import poster from "../../assets/lineupPoster.jpeg";
+import lineupTitle from "../../assets/lineupTitle.svg";
 
 const LineupPage = (props) => {
   return (
     <article id="lineupPage">
       <section>
         <div className="pageHeader">
-          <h1>Lineup</h1>
+          <h1>
+            <img src={lineupTitle} alt="Lineup" />
+          </h1>
         </div>
         <div id="lineupPoster">
           <img src={poster} alt={"poster"} />
