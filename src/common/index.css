@@ -25,7 +25,7 @@ p {
 
   --app-background: #574c44;
   --app-sand: #d6b6a7;
-  --app-green: #61988e;
+  --app-green: #5a8c8a;
   --app-green-25: #61988e42;
   --app-blue: #5db7de;
 }
@@ -81,6 +81,18 @@ header {
 
 header img {
   height: 35px;
+  width: 200px;
+}
+
+.headerIcon {
+  width: 2em;
+}
+
+.headerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 footer {
@@ -94,22 +106,28 @@ footer {
 }
 
 footer img {
-  height: 1em;
+  height: 2em;
+  width: 10em;
   margin-bottom: 5px;
 }
 
 footer div.linkRow {
   display: flex;
   width: 100%;
+  max-width: 600px;
   justify-content: space-around;
   align-items: center;
   padding: 5px 0;
+  margin: 0 auto;
 }
 
 footer svg {
   width: 3em;
   height: 3em;
   fill: var(--app-green);
+}
+footer p {
+  color: var(--app-sand);
 }
 
 .noScroll {
@@ -272,8 +290,16 @@ footer svg {
   padding: 5% 0;
 }
 
-#homeHeader > h3,
-#homeHeader > h4 {
+.homeHeaderBody {
+  width: 90vw;
+  height: 40em;
+  max-width: 500px;
+  margin-bottom: 2em;
+}
+
+.homeHeaderBody > h3,
+.homeHeaderBody > h4 {
+  text-align: justify;
   line-height: 1.5rem;
   font-weight: 400;
   padding: 1rem 0;
@@ -284,11 +310,35 @@ footer svg {
   justify-content: center;
   padding: 1rem;
   width: 100vw;
+  height: 5em;
+}
+
+@media screen and (min-width: 300px) {
+  .homeHeaderBody {
+    height: 35em;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .homeHeaderBody {
+    height: 30em;
+  }
 }
 
 @media screen and (min-width: 600px) {
+  .homeHeaderBody {
+    height: 25em;
+  }
+
   #homeHeaderPartnerImg {
     left: calc(50vw - 200px);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .homeHeaderBody {
+    height: 15em;
+    max-width: 750px;
   }
 }
 
@@ -308,7 +358,7 @@ footer svg {
 #homeHeroImg {
   width: 100%;
   height: 100%;
-  background-image: url("https://res.cloudinary.com/dnmokvouu/image/upload/v1651894939/homeBackground_cc9y7s.webp"),
+  background-image: url("https://res.cloudinary.com/dnmokvouu/image/upload/v1651894939/hollergirl2022/homeBackground_cc9y7s.webp"),
     linear-gradient(180deg, var(--app-background) 50%, var(--app-green));
   background-blend-mode: soft-light, luminosity;
   background-position: center;
@@ -353,6 +403,7 @@ footer svg {
   background-position: center;
   background-repeat: repeat-x;
   background-size: cover;
+  background-image: url("https://res.cloudinary.com/dnmokvouu/image/upload/v1652038949/hollergirl2022/forest-border-black_v4nsh7.webp");
 }
 
 /* LINEUP */
@@ -361,6 +412,7 @@ footer svg {
   position: relative;
   align-items: center;
   z-index: 10;
+  width: 100vw;
   height: 100vh;
   z-index: 98;
 }
@@ -369,6 +421,7 @@ footer svg {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   color: var(--app-background);
   width: 100%;
@@ -376,7 +429,8 @@ footer svg {
 
 #lineup img {
   position: absolute;
-  width: 125vw;
+  width: 90vw;
+  max-width: 700px;
 }
 
 /* EVENT BOARD */
@@ -402,6 +456,11 @@ footer svg {
   padding-bottom: 10vh;
 }
 
+#campingSection > img {
+  width: 90vw;
+  height: 20vw;
+}
+
 #activitiesSection {
   padding-top: 3em;
   background-color: var(--app-white);
@@ -415,8 +474,20 @@ footer svg {
   justify-content: center;
   align-items: center;
   width: 80%;
-  position: relative;
   margin: 2em 0;
+}
+
+.eventContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.eventContent p {
+  text-align: justify;
+  width: 100%;
 }
 
 .eventBackground {
@@ -431,14 +502,7 @@ footer svg {
   margin: 1em 0;
 }
 
-.event h5 {
-  color: var(--app-white);
-  font-size: 2rem;
-  font-weight: 400;
-  text-align: center;
-}
-
-.event p {
+.event h3 {
   color: var(--app-white);
   font-size: 1.25rem;
   text-align: center;
@@ -446,16 +510,66 @@ footer svg {
   margin-bottom: 2em;
 }
 
+.event p {
+  line-height: 1.5em;
+}
+
 #activitiesSection .eventBackground {
   border-radius: 50%;
   color: var(--app-black);
 }
 
-#activitiesSection .event p {
+#activitiesSection .event h3 {
   font-size: 2rem;
   font-weight: 400;
   color: var(--app-black);
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+  #campingSection .eventBackground {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .event {
+    width: 90%;
+  }
+
+  .eventContent {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .eventContent p {
+    width: 20em;
+    padding: 1em;
+  }
+
+  #campingSection div.event {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #campingSection div.event h3 {
+    width: 100%;
+  }
+
+  #campingSection div.event div.eventBackground {
+    max-width: 30%;
+  }
+
+  #activitiesSection .eventBackground {
+    width: 500px;
+  }
+
+  #activitiesSection .eventContent {
+    width: 70%;
+    justify-content: center;
+  }
 }
 
 /* Partner */
@@ -503,8 +617,11 @@ footer svg {
 
 #map {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
+  align-items: center;
+  padding-bottom: 10vh;
 }
 
 #map div.mapBackground {
@@ -516,6 +633,7 @@ footer svg {
   aspect-ratio: 1;
   background-color: var(--app-green);
   z-index: 98;
+  background-image: url("https://res.cloudinary.com/dnmokvouu/image/upload/v1652041940/hollergirl2022/map_nhv6rk.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -523,13 +641,14 @@ footer svg {
   max-width: 500px;
 }
 
-#map h5 {
+#map h2 {
+  padding-bottom: 1em;
   font-size: 1.2rem;
-  width: 100%;
+  width: 500px;
   color: var(--app-white);
 }
 
-#map h5 span {
+#map h2 span {
   display: block;
 }
 
@@ -548,10 +667,6 @@ footer svg {
 
   #homeHeader > h3,
   #homeHeader > h4 {
-    width: 60%;
-  }
-
-  #lineup {
     width: 60%;
   }
 
@@ -590,6 +705,10 @@ footer svg {
 }
 
 @media screen and (min-width: 1100px) {
+  #homeHero {
+    height: 350vh;
+  }
+
   #homeHeader > h3,
   #homeHeader > h4 {
     width: 50%;
@@ -597,6 +716,10 @@ footer svg {
 
   #lineup {
     width: 50%;
+  }
+
+  #lineup img {
+    max-width: 1000px;
   }
 
   #homeHeroBorder {
@@ -607,10 +730,6 @@ footer svg {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  .event {
-    width: 45%;
   }
 
   #map {
@@ -766,7 +885,7 @@ footer svg {
 #FestivalInfoHeaderBackgroundImg {
   width: 100%;
   height: 100%;
-  background-image: url("https://images.pexels.com/photos/6324373/pexels-photo-6324373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+  background-image: url("https://res.cloudinary.com/dnmokvouu/image/upload/v1652029763/hollergirl2022/camping_w3bh7a.webp"),
     linear-gradient(180deg, var(--app-background) 50%, var(--app-green));
   background-blend-mode: soft-light, luminosity;
   background-position: center;
