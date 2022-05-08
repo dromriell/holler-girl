@@ -19,7 +19,7 @@ const HomePage = () => {
       {!isLoaded && <LoadingOverlay />}
       <HomeHero setIsLoaded={setIsLoaded} />
       <EventBoard />
-      <PartnerSection />
+      {/* <PartnerSection /> */}
       <section id="map">
         <div
           className="mapBackground"
