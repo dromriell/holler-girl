@@ -1,5 +1,4 @@
 import Footer from "../Footer";
-import poster from "../../assets/lineupPoster.jpeg";
 import lineupTitle from "../../assets/lineupTitle.svg";
 
 const LineupPage = (props) => {
@@ -12,7 +11,10 @@ const LineupPage = (props) => {
           </h1>
         </div>
         <div id="lineupPoster">
-          <img src={poster} alt={"poster"} />
+          <img
+            src="https://res.cloudinary.com/dnmokvouu/image/upload/v1652038645/hollergirl2022/lineupPoster_zmb0u1.webp"
+            alt={"poster"}
+          />
         </div>
       </section>
       <Footer />

@@ -1,5 +1,3 @@
-import border from "../../assets/forest-border-black.png";
-
 const HeroParallax = (props) => {
   const { pageOffset } = props;
 
@@ -18,12 +16,7 @@ const HeroParallax = (props) => {
           transform: `translateY(${pageOffset * 0}px)`,
         }}
       >
-        <div
-          id="homeHeroBorderImg"
-          style={{
-            backgroundImage: `url(${border})`,
-          }}
-        ></div>
+        <div id="homeHeroBorderImg"></div>
       </div>
     </>
   );

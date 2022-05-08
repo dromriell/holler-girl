@@ -4,7 +4,6 @@ import HomeHero from "./HomeHero";
 import EventBoard from "./EventBoard";
 import PartnerSection from "./PartnerSection";
 import Footer from "../Footer";
-import map from "../../assets/map01.png";
 import LoadingOverlay from "../LoadingOverlay";
 
 const HomePage = () => {
@@ -21,15 +20,11 @@ const HomePage = () => {
       <EventBoard />
       {/* <PartnerSection /> */}
       <section id="map">
-        <div
-          className="mapBackground"
-          style={{ backgroundImage: `url('${map}')` }}
-        >
-          <h5>
-            <span>4211 Lower River Road</span>
-            <span>Livingston, KY 40445</span>
-          </h5>
-        </div>
+        <h2>
+          <span>4211 Lower River Road</span>
+          <span>Livingston, KY 40445</span>
+        </h2>
+        <div className="mapBackground"></div>
       </section>
       <Footer />
     </article>
