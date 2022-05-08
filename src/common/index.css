@@ -624,6 +624,11 @@ footer svg {
   width: 100%;
 }
 
+.pageHeader img {
+  width: 10em;
+  height: 3em;
+}
+
 #ticketOptionsList {
   display: flex;
   flex-direction: column;
@@ -695,7 +700,7 @@ footer svg {
 }
 
 #lineupPoster img {
-  max-width: 600px;
+  max-width: 90vw;
 }
 
 /* 
@@ -711,6 +716,13 @@ footer svg {
   position: relative;
   height: 25vh;
   max-height: 500px;
+}
+
+#FestivalInfoHeader img {
+  position: absolute;
+  top: 2em;
+  width: 20em;
+  height: 3em;
 }
 
 #FestivalInfoHeader h1 {
@@ -740,16 +752,26 @@ footer svg {
   background-size: cover;
 }
 
-#FestivalInfo {
+.festivalInfo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 10px;
+  padding: 1.5em 10px;
 }
 
-#FestivalInfo p {
+.festivalInfo h2 {
+  font-size: 2.5em;
+}
+
+.festivalInfo h3 {
+  padding-top: 0.5em;
+}
+
+.festivalInfo p {
   max-width: 600px;
+  padding: 0.5em;
+  line-height: 1.5em;
 }
 
 .custom-shape-divider-top-1651719041 {
@@ -783,7 +805,7 @@ footer svg {
 }
 
 @media screen and (min-width: 600px) {
-  #FestivalInfo {
+  .festivalInfo {
     align-items: center;
     padding: 2em;
   }
