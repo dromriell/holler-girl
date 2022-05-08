@@ -32,14 +32,19 @@ export const lineupData = [
 
 export const ticketData = [
   {
-    name: "Two Day Pass",
-    price: "85",
-    details: ["All ages", "Per person", "Includes camping"],
+    name: "Two Day General Admission w/ Tent Camping",
+    price: "50",
+    details: ["All ages", "Per person", "Includes primitive camping"],
   },
   {
-    name: "Single Day Pass",
-    price: "50",
-    details: ["All ages", "Per person"],
+    name: "Two Day General Admission w/ Car Camping",
+    price: "60",
+    details: ["All ages", "Per person", "Includes car camping"],
+  },
+  {
+    name: "RV Site Pass",
+    price: "65",
+    details: ["Does not include general admission"],
   },
 ];
 
