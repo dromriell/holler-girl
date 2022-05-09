@@ -129,6 +129,9 @@ footer svg {
 footer p {
   color: var(--app-sand);
 }
+footer p span {
+  display: block;
+}
 
 .noScroll {
   overflow: auto;
@@ -644,7 +647,7 @@ footer p {
 #map h2 {
   padding-bottom: 1em;
   font-size: 1.2rem;
-  width: 500px;
+  max-width: 500px;
   color: var(--app-white);
 }
 

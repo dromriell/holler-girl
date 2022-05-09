@@ -32,8 +32,9 @@ const Footer = (props) => {
         </a>
       </div>
       <p>
-        © HollerGirl Music Festival 2022 - Logo By Sarah Fightmaster - Built By
-        Devon Romriell
+        <span>© HollerGirl Music Festival 2022</span>
+        <span>Logo By Sarah Fightmaster</span>
+        <span>Built By Devon Romriell</span>
       </p>
     </footer>
   );
