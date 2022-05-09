@@ -1,29 +1,3 @@
-export const lineupData = [
-  "Rachel Crowe",
-  "Ande Fee",
-  "Honey Wright",
-  "Emma Lee",
-  "Sarah Fightmaster",
-  "Mary Wright",
-  "Lemon Grass",
-  "Anna Kline",
-  "Second Rodeo",
-  "Brittany Dawn Samples",
-  "Erin Sliney",
-  "Jenn Marie",
-  "Elizabeth Hazlett",
-  "Liz Frazier",
-  "Madylin Goins",
-  "Huck & Jesse",
-  "Em Jamison",
-  "Kadie Meadows",
-  "Melody Youngblood",
-  "Sydney Adams",
-  "Elizabeth Walker",
-  "Teresa Prince",
-  "Slut Pill",
-];
-
 export const ticketData = [
   {
     name: "Two Day General Admission w/ Tent Camping",

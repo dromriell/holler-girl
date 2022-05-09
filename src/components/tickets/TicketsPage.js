@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import TicketList from "./TicketList";
 import ticketsTitle from "../../assets/ticketsTitle.svg";
 
-const TicketsPage = (props) => {
+const TicketsPage = () => {
   return (
     <article id="ticketsPage">
       <section>

@@ -15,10 +15,6 @@ const routeLinks = [
     name: "Info",
     path: "/info",
   },
-  // {
-  //   name: "Merch",
-  //   path: "/merch",
-  // },
 ];
 
 const SideMenu = (props) => {

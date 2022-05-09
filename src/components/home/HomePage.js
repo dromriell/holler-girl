@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import HomeHero from "./HomeHero";
+import HeroSection from "./hero/HeroSection";
 import EventBoard from "./EventBoard";
-import PartnerSection from "./PartnerSection";
 import Footer from "../Footer";
 import LoadingOverlay from "../LoadingOverlay";
+import MapSection from "./MapSection";
 
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -16,16 +16,9 @@ const HomePage = () => {
       style={!isLoaded ? { overflow: "hidden", maxHeight: "100vh" } : undefined}
     >
       {!isLoaded && <LoadingOverlay />}
-      <HomeHero setIsLoaded={setIsLoaded} />
+      <HeroSection setIsLoaded={setIsLoaded} />
       <EventBoard />
-      {/* <PartnerSection /> */}
-      <section id="map">
-        <h2>
-          <span>4211 Lower River Road</span>
-          <span>Livingston, KY 40445</span>
-        </h2>
-        <div className="mapBackground"></div>
-      </section>
+      <MapSection />
       <Footer />
     </article>
   );

@@ -1,4 +1,3 @@
-import "./common/App.css";
 import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import HeaderBar from "./components/HeaderBar";
@@ -8,7 +7,6 @@ import HomePage from "./components/home/HomePage";
 import TicketsPage from "./components/tickets/TicketsPage";
 import LineupPage from "./components/lineup/LineupPage";
 import FestivalInfoPage from "./components/festivalInfo/FestivalInfoPage";
-import MerchPage from "./components/merch/MerchPage";
 
 function App() {
   const location = useLocation();
@@ -30,7 +28,6 @@ function App() {
         <Route path="/tickets" element={<TicketsPage />} />
         <Route path="/lineup" element={<LineupPage />} />
         <Route path="/info" element={<FestivalInfoPage />} />
-        <Route path="/merch" element={<MerchPage />} />
       </Routes>
     </main>
   );

@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 
-import { lineupData } from "../../common/siteData";
 import LineupSection from "./LineupSection";
 import HeroParallax from "./HeroParallax";
-import HomeHeader from "./HomeHeader";
+import HeroHeader from "./HeroHeader";
 
-const HomeHero = (props) => {
+const HeroSection = (props) => {
   const { setIsLoaded } = props;
   const [pageOffset, setPageOffset] = useState(0);
 
@@ -18,11 +17,11 @@ const HomeHero = (props) => {
 
   return (
     <section id="homeHero">
-      <HomeHeader setIsLoaded={setIsLoaded} />
-      <LineupSection lineupData={lineupData} pageOffset={pageOffset} />
+      <HeroHeader setIsLoaded={setIsLoaded} />
+      <LineupSection pageOffset={pageOffset} />
       <HeroParallax pageOffset={pageOffset} />
     </section>
   );
 };
 
-export default HomeHero;
+export default HeroSection;

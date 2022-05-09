@@ -1,7 +1,7 @@
 import Footer from "../Footer";
 import lineupTitle from "../../assets/lineupTitle.svg";
 
-const LineupPage = (props) => {
+const LineupPage = () => {
   return (
     <article id="lineupPage">
       <section>

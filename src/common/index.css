@@ -14,17 +14,11 @@ p {
 
 :root {
   --app-white: #f5e8e1;
-
-  --app-teal: #007991;
-  --app-accent: #f679e5;
-  --app-yellow: #fdf7a3;
-  --app-peach: #f4bc8b;
   --app-black: #0c0a3e;
-  --app-teal-50: #00799179;
   --app-shadow: rgba(0, 0, 0, 0.404);
-
   --app-background: #574c44;
   --app-sand: #d6b6a7;
+  --app-peach: #f4bc8b;
   --app-green: #5a8c8a;
   --app-green-25: #61988e42;
   --app-blue: #5db7de;

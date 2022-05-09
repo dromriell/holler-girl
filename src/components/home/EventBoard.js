@@ -23,7 +23,7 @@ const Event = (props) => {
   );
 };
 
-const CampingSection = (props) => {
+const CampingSection = () => {
   return (
     <div id="campingSection" className="eventSection">
       <img src={siteTitle} alt="The Site" />
@@ -40,7 +40,7 @@ const CampingSection = (props) => {
   );
 };
 
-const ActivitiesSection = (props) => {
+const ActivitiesSection = () => {
   return (
     <div id="activitiesSection" className="eventSection">
       <div className="custom-shape-divider-top-1651719041">
@@ -76,8 +76,7 @@ const ActivitiesSection = (props) => {
   );
 };
 
-const EventBoard = (props) => {
-  const { borderEvent } = props;
+const EventBoard = () => {
   return (
     <section id="eventBoard">
       <CampingSection />

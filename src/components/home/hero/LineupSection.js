@@ -1,8 +1,8 @@
 import Clouds from "./Clouds";
-import lineUpImage from "../../assets/lineup.svg";
+import lineUpImage from "../../../assets/lineup.svg";
 
 const LineupSection = (props) => {
-  const { lineupData, pageOffset } = props;
+  const { pageOffset } = props;
   return (
     <article id="lineupContainer">
       <Clouds pageOffset={pageOffset} />

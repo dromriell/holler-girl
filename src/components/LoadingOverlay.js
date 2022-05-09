@@ -1,4 +1,4 @@
-const LoadingOverlay = (props) => {
+const LoadingOverlay = () => {
   return (
     <div className="loadingOverlay">
       <div className="loading-spinner"></div>

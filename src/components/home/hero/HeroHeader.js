@@ -1,6 +1,6 @@
-import gh17PresentsTitle from "../../assets/gh17PresentsTitle.svg";
+import gh17PresentsTitle from "../../../assets/gh17PresentsTitle.svg";
 
-const HomeHeader = (props) => {
+const HeroHeader = (props) => {
   const { setIsLoaded } = props;
   return (
     <div id="homeHeader">
@@ -46,4 +46,4 @@ const HomeHeader = (props) => {
   );
 };
 
-export default HomeHeader;
+export default HeroHeader;
