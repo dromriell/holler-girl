@@ -918,6 +918,16 @@ footer p span {
   line-height: 1.5em;
 }
 
+.festivalInfo p span {
+  display: block;
+  padding-bottom: 1em;
+}
+
+.festivalInfo a {
+  color: var(--app-green);
+  font-weight: 600;
+}
+
 .custom-shape-divider-top-1651719041 {
   position: absolute;
   top: -1px;
