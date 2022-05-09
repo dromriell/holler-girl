@@ -74,7 +74,8 @@ export const eventData = {
         "https://res.cloudinary.com/dnmokvouu/image/upload/v1652029914/hollergirl2022/greenhouse17_01_j4jn60.webp",
       ],
       title: "Silent Art Auction in Support of GreenHouse17",
-      description: "",
+      description:
+        "Greenhouse 17 is a nonprofit organization committed to ending intimate partner abuse in families and the community. Their shelter in rural Fayette County, Kentucky is surrounded by a beautiful 40-acre property. We farm this land to offer nature-based healing, nutritious field-to-table produce, and job training for survivors. Nurturing lives harmed by intimate partner abuse.",
     },
   ],
 };
