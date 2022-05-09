@@ -57,15 +57,27 @@ const FestivalInfoPage = (props) => {
         <div className="festivalInfo">
           <h2>Arrival</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Porttitor rhoncus dolor purus non enim praesent elementum facilisis
-            leo. Mi proin sed libero enim.
+            <span>
+              RV arrivals, please come through the front gate to check in. You
+              will then be directed to your reserved spot. Car campers, please
+              check in at the front gate, then you will be directed to the car
+              camping spots.
+            </span>
+            <span>
+              All General Admission / Tent Campers, please check in at the front
+              gate, you will then be directed to the parking area across from
+              the venue. Please be aware that you might have to carry your
+              things back into the venue.
+            </span>
           </p>
         </div>
         <div className="festivalInfo">
-          <h2>More Questions?</h2>
-          <p>Reach out to us at --- --- --- for questions or clarification.</p>
+          <h2>Questions?</h2>
+          <p>
+            Reach out to us at{" "}
+            <a href="mailTo: info@hollergirl.live">info@hollergirl.live</a> for
+            questions or clarification.
+          </p>
         </div>
       </section>
       <Footer />
