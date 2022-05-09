@@ -11,7 +11,7 @@ const Clouds = (props) => {
           backgroundImage: `url(${cloud})`,
           transform: `translate(${pageOffset * -0.1}px, 0)`,
           alignSelf: "flex-end",
-          opacity: 1 - pageOffset * 0.001,
+          opacity: 1.35 - pageOffset * 0.001,
         }}
       ></div>
       <div
@@ -20,7 +20,7 @@ const Clouds = (props) => {
           backgroundImage: `url(${cloud})`,
           transform: `translate(${pageOffset * 0.1}px, 0)`,
           alignSelf: "flex-start",
-          opacity: 1 - pageOffset * 0.001,
+          opacity: 1.35 - pageOffset * 0.001,
         }}
       ></div>
     </div>
