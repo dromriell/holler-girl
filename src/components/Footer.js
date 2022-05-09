@@ -18,18 +18,18 @@ const Footer = (props) => {
         >
           <FacebookLogo />
         </a>
-        <a href="#" aria-label="Twitter">
+        {/* <a href="#" aria-label="Twitter">
           <TwitterLogo />
-        </a>
-        <a href="#" aria-label="Email">
+        </a> */}
+        <a href="mailto: info@hollergirl.live" aria-label="Email">
           <EmailLogo />
         </a>
-        <a href="#" aria-label="Youtube">
+        {/* <a href="#" aria-label="Youtube">
           <YoutubeLogo />
-        </a>
-        <a href="#" aria-label="Instagram">
+        </a> */}
+        {/* <a href="#" aria-label="Instagram">
           <InstagramLogo />
-        </a>
+        </a> */}
       </div>
       <p>
         <span>© HollerGirl Music Festival 2022</span>
