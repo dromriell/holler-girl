@@ -17,77 +17,54 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Lora:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>HollerGirl Music Festival</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "HollerGirl 2020 Music Festival",
+        "description": "HollerGirl is so much more than an amazing weekend of music, it is a concept. A female focused music event where we highlight all of the incredibly talented women musicians we have here in Kentucky.",
+        "startDate": "2022-08-12T09:00:00-04:00",
+        "endDate": "2022-08-13T23:45:00-04:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Rockcastle Riverside",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4211 Lower River Road",
+            "addressLocality": "Livingston",
+            "addressRegion": "KY",
+            "postalCode": "40445"
+          }
+        },
+        "image": [
+          "https://res.cloudinary.com/dnmokvouu/image/upload/v1652038645/hollergirl2022/lineupPoster_zmb0u1.webp",
+          "https://res.cloudinary.com/dnmokvouu/image/upload/v1652038180/hollergirl2022/camping01_rp723m.webp"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.tickettailor.com/events/hollergirl/695993#",
+          "price": "50",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "performer": {
+          "@type": "PerformingGroup",
+          "name": "Kira and Morrison"
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "HollerGirl",
+          "url": "https://www.hollergirl.live"
+        }
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "HollerGirl 2020 Music Festival",
-      "description": "HollerGirl is so much more than an amazing weekend of music, it is a concept. A female focused music event where we highlight all of the incredibly talented women musicians we have here in Kentucky.",
-      "startDate": "2022-08-12T09:00:00-04:00",
-      "endDate": "2022-08-13T23:45:00-04:00",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "location": {
-        "@type": "Place",
-        "name": "Rockcastle Riverside",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "4211 Lower River Road",
-          "addressLocality": "Livingston",
-          "addressRegion": "KY",
-          "postalCode": "40445"
-        }
-      },
-      "image": [
-        "https://res.cloudinary.com/dnmokvouu/image/upload/v1652038645/hollergirl2022/lineupPoster_zmb0u1.webp",
-        "https://res.cloudinary.com/dnmokvouu/image/upload/v1652038180/hollergirl2022/camping01_rp723m.webp"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.tickettailor.com/events/hollergirl/695993#",
-        "price": "50",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      },
-      "performer": {
-        "@type": "PerformingGroup",
-        "name": "Kira and Morrison"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "HollerGirl",
-        "url": "https://www.hollergirl.live"
-      }
-    }
-  </script>
 </html>
