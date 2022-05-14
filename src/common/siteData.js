@@ -97,6 +97,7 @@ export const eventSchema = {
     price: "50",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
+    validFrom: "2022-04-15T12:00",
   },
   performer: {
     "@type": "PerformingGroup",
