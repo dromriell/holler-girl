@@ -69,7 +69,7 @@ export const partnersArray = [
 export const eventSchema = {
   "@context": "https://schema.org",
   "@type": "Event",
-  name: "HollerGirl 2020 Music Festival",
+  name: "HollerGirl 2022 Music Festival",
   description:
     "HollerGirl is so much more than an amazing weekend of music, it is a concept. A female focused music event where we highlight all of the incredibly talented women musicians we have here in Kentucky.",
   startDate: "2022-08-12T09:00:00-04:00",
