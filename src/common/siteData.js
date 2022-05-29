@@ -100,8 +100,8 @@ export const eventSchema = {
     validFrom: "2022-04-15T12:00",
   },
   performer: {
-    "@type": "PerformingGroup",
-    name: "Kira and Morrison",
+    "@type": "Thing",
+    name: "Organization",
   },
   organizer: {
     "@type": "Organization",
