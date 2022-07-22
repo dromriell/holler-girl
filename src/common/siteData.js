@@ -68,12 +68,13 @@ export const partnersArray = [
 
 export const eventSchema = {
   "@context": "https://schema.org",
-  "@type": "Event",
+  "@type": "Festival",
   name: "HollerGirl 2022 Music Festival",
   description:
     "HollerGirl is so much more than an amazing weekend of music, it is a concept. A female focused music event where we highlight all of the incredibly talented women musicians we have here in Kentucky.",
-  startDate: "2022-08-12T09:00:00-04:00",
-  endDate: "2022-08-13T23:45:00-04:00",
+  startDate: "2022-08-12",
+  endDate: "2022-08-13",
+  url: "https://hollergirl.live",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   eventStatus: "https://schema.org/EventScheduled",
   location: {
@@ -88,8 +89,8 @@ export const eventSchema = {
     },
   },
   image: [
-    "https://res.cloudinary.com/dnmokvouu/image/upload/v1652038645/hollergirl2022/lineupPoster_zmb0u1.webp",
-    "https://res.cloudinary.com/dnmokvouu/image/upload/v1652038180/hollergirl2022/camping01_rp723m.webp",
+    "https://res.cloudinary.com/dnmokvouu/image/upload/v1658460292/hollergirl2022/hgLogo1x1_v7c12a.webp",
+    "https://res.cloudinary.com/dnmokvouu/image/upload/v1658460296/hollergirl2022/hgLogo4x3_ffapxn.webp",
   ],
   offers: {
     "@type": "Offer",
@@ -97,11 +98,6 @@ export const eventSchema = {
     price: "50",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
-    validFrom: "2022-04-15T12:00",
-  },
-  performer: {
-    "@type": "Thing",
-    name: "Organization",
   },
   organizer: {
     "@type": "Organization",
