@@ -12,7 +12,7 @@ const LineupPage = () => {
         </div>
         <div id="lineupPoster">
           <img
-            src="https://res.cloudinary.com/dnmokvouu/image/upload/v1652038645/hollergirl2022/lineupPoster_zmb0u1.webp"
+            src="https://res.cloudinary.com/dnmokvouu/image/upload/v1659060464/hollergirl2022/linupPoster_cbdufr.webp"
             alt={"poster"}
           />
         </div>
