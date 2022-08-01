@@ -1,11 +1,15 @@
-import partnersTitle from "../../assets/partnersText.svg";
 import { partnersArray } from "../../common/siteData";
 
 const Partner = (props) => {
-  const { name, logoSrc } = props;
+  const { logoSrc, link } = props;
   return (
-    <li className="partnerContainer">
-      <img src={logoSrc} alt={`${name}-logo`} />
+    <li
+      className="partnerContainer"
+      style={{ backgroundImage: `url('${logoSrc}')` }}
+    >
+      <a href={link}>
+        <div></div>
+      </a>
     </li>
   );
 };
@@ -13,7 +17,7 @@ const Partner = (props) => {
 const PartnerSection = (props) => {
   return (
     <section id="partnersSection">
-      <img src={partnersTitle} alt="Partners" />
+      <h3>Special Thanks to our Partners</h3>
       <ul className="partnersList">
         {partnersArray.map((partnerInfo) => {
           return <Partner {...partnerInfo} />;

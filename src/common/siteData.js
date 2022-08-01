@@ -54,15 +54,35 @@ export const eventData = {
   ],
 };
 
-export const partnersArray = [
+export const sponsorsArray = [
   {
-    name: "GreenHouse17",
-    logoSrc: "",
+    name: "jarfly",
+    images: [
+      "https://res.cloudinary.com/dnmokvouu/image/upload/v1659317138/hollergirl2022/jf_logo_hehqtw.webp",
+    ],
+    link: "http://jarflybrewing.com/",
   },
   {
-    name: "Rockcastle Riverside",
+    name: "blueStallion",
+    images: [
+      "https://res.cloudinary.com/dnmokvouu/image/upload/v1659318564/hollergirl2022/bs_logo_msvwxg.webp",
+    ],
+    link: "https://www.bluestallionbrewing.com/",
+  },
+];
+
+export const partnersArray = [
+  {
+    name: "jarfly",
     logoSrc:
-      "https://static.wixstatic.com/media/c0bb12_1f109e260fed4e1b8f5b061a430d23a8~mv2.jpg/v1/fill/w_538,h_208,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/rockcastlelogo.jpg",
+      "https://res.cloudinary.com/dnmokvouu/image/upload/v1659317138/hollergirl2022/jf_logo_hehqtw.webp",
+    link: "http://jarflybrewing.com/",
+  },
+  {
+    name: "blueStallion",
+    logoSrc:
+      "https://res.cloudinary.com/dnmokvouu/image/upload/v1659318564/hollergirl2022/bs_logo_msvwxg.webp",
+    link: "https://www.bluestallionbrewing.com/",
   },
 ];
 

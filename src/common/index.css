@@ -576,37 +576,67 @@ footer p span {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-bottom: 10vh;
+  padding: 10vh 0;
 }
 
-#partnersSection img {
-  width: 60%;
+#partnersSection h3 {
+  color: var(--app-white);
+  font-size: 4em;
 }
 
 .partnersList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-around;
+  width: 50%;
+  padding-top: 2em;
 }
 
 .partnerContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid var(--app-peach);
+  border-radius: 50%;
   margin: 1em 0;
 }
 
-.partnerContainer img {
-  width: 75%;
+.partnerContainer a div {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.eventBackground {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid var(--app-peach);
+  border-radius: 10%;
+  margin: 1em 0;
 }
 
 .partnerContainer h5 {
   font-size: 2em;
   padding: 0.5em 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .partnersList {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #partnersSection h3 {
+    font-size: 2em;
+  }
 }
 
 /* Map */

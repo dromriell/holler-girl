@@ -1,5 +1,6 @@
 import { eventData } from "../../common/siteData";
 import siteTitle from "../../assets/siteText.svg";
+import PartnerSection from "./PartnerSection";
 
 const Event = (props) => {
   const { name, images, title, description } = props;
@@ -81,6 +82,7 @@ const EventBoard = () => {
     <section id="eventBoard">
       <CampingSection />
       <ActivitiesSection />
+      <PartnerSection />
     </section>
   );
 };
