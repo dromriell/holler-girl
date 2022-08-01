@@ -84,6 +84,12 @@ export const partnersArray = [
       "https://res.cloudinary.com/dnmokvouu/image/upload/v1659318564/hollergirl2022/bs_logo_msvwxg.webp",
     link: "https://www.bluestallionbrewing.com/",
   },
+  {
+    name: "barnhill chimney",
+    logoSrc:
+      "https://res.cloudinary.com/dnmokvouu/image/upload/v1659321215/hollergirl2022/bhc_logo_dxt1ol.webp",
+    link: "https://barnhillchimney.com/",
+  },
 ];
 
 export const eventSchema = {
