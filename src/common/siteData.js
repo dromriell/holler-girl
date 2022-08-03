@@ -91,7 +91,7 @@ export const partnersArray = [
     link: "https://barnhillchimney.com/",
   },
   {
-    name: "girlsgirlsgirls burritos,
+    name: "girlsgirlsgirls burritos",
     logoSrc: "https://www.girlsgirlsgirlsburritos.com/images/logo.png",
     link: "https://www.girlsgirlsgirlsburritos.com/"
   }
