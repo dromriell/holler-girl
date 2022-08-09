@@ -90,6 +90,11 @@ export const partnersArray = [
       "https://res.cloudinary.com/dnmokvouu/image/upload/v1659321215/hollergirl2022/bhc_logo_dxt1ol.webp",
     link: "https://barnhillchimney.com/",
   },
+  {
+    name: "girlsgirlsgirls burritos",
+    logoSrc: "https://www.girlsgirlsgirlsburritos.com/images/logo.png",
+    link: "https://www.girlsgirlsgirlsburritos.com/"
+  }
 ];
 
 export const eventSchema = {
